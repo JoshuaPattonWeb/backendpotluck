@@ -1,4 +1,4 @@
-const { dangerouslyDisableDefaultSrc } = require('helmet/dist/types/middlewares/content-security-policy')
+
 const db = require('../data/db-config')
 
 const getAll = () => {
@@ -21,7 +21,7 @@ const add = async (newUser) => {
 
 const updateUser = async (id, updatedUser) => {
     if(updatedUser.username) {
-    const user = await db('users')
+    return db('users')
     .where('user_id', id)
     .first()
     .update({

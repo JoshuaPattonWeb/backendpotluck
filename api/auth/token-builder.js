@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken')
-const { SECRET } = require('./secrets')
+const { SECRET } = require('./secrets/secrets')
 
 module.exports = function tokenBuilder(user) {
     const payload = {
